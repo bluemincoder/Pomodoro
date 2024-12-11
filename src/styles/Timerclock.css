@@ -1,0 +1,196 @@
+.timer-clock {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1e1e1e00;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    width: 400px;
+    margin: auto;
+}
+
+.timer-header {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 200;
+    background: #00000088;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    background-color: #11119889;
+    color: #fff;
+}
+
+.timer-display {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.timer-button,
+.timer-reset,
+.settings-button {
+    background-color: #11119889;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: left;
+    color: #000;
+}
+
+.apply-button {
+    background-color: #e91e63;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.266); /* Transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* Quote Styling */
+.quote {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    font-style: italic;
+    line-height: 1.5;
+}
+.settings-content {
+    background: #202020; /* Light background for contrast */
+    padding: 30px;
+    border-radius: 20px;
+    width: 420px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for a card-like feel */
+    animation: slideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.settings-content h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 10px;
+}
+
+.settings-content label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.settings-content input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    color: #ddd;
+    background-color: #484848;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.apply-button {
+    background-color: #e91e63;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #d81b60;
+}
+
+/* Close button for the settings modal */
+.settings-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #dbdbdb;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.settings-close:hover {
+    color: #e91e63;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
