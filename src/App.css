@@ -1,11 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .App {
     font-family: Arial, sans-serif;
     text-align: center;
     background-image: url('./assets/bg.png'); /* Add the image from the assets folder */
-    background-size: cover; /* Make sure the background image covers the entire screen */
+    background-size: 101%; /* Make sure the background image covers the entire screen */
     background-position: center; /* Center the image */
     min-height: 100vh;
     display: flex;
+    min-width: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -21,4 +26,9 @@
     color: #555;
     font-size: 16px;
     margin-bottom: 20px;
+}
+iframe{
+    left: 5%;
+    bottom: 5%;
+    border: none;
 }

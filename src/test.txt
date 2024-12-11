@@ -1,4 +1,0 @@
-https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
-
-
-https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
