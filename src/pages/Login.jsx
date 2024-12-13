@@ -1,54 +1,33 @@
-import React, { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
-import "../styles/Login.css";
+import { useAuth0 } from "@auth0/auth0-react";
+import React from "react";
+import "../styles/Login.css"; // Import the CSS file
 
-function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("Login attempted with:", { email, password });
-    };
+const LoginButton = () => {
+    const { user, isAuthenticated, loginWithPopup, logout } = useAuth0();
 
     return (
-        <Container className="login-wrapper">
-            <div className="login-form-container">
-                <h2 className="login-title">Login</h2>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group
-                        className="form-group"
-                        controlId="formBasicEmail"
+        <>
+            {/* {isAuthenticated && (
+                <div className="Helo">
+                    <h2>Helo, {user.name}</h2>
+                </div>
+            )} */}
+            <div className="auth-button-container">
+                {isAuthenticated ? (
+                    <button className="auth-button" onClick={() => logout()}>
+                        Logout
+                    </button>
+                ) : (
+                    <button
+                        className="auth-button"
+                        onClick={() => loginWithPopup()}
                     >
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                            type="email"
-                            placeholder="Enter email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </Form.Group>
-
-                    <Form.Group
-                        className="form-group"
-                        controlId="formBasicPassword"
-                    >
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </Form.Group>
-
-                    <Button type="submit" className="login-button">
-                        Login
-                    </Button>
-                </Form>
+                        Log In
+                    </button>
+                )}
             </div>
-        </Container>
+        </>
     );
-}
+};
 
-export default Login;
+export default LoginButton;

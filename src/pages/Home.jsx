@@ -2,8 +2,11 @@ import React from "react";
 import Timerclock from "../components/Timerclock";
 import Iframe from "react-iframe";
 import TodoList from "../components/TodoList";
+import Login from "./Login";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Home() {
+    const { user, loginWithRedirect, isAuthenticated } = useAuth0();
     return (
         <div className="Home">
             <Timerclock />
@@ -17,6 +20,7 @@ function Home() {
                 position="absolute"
             />
             <TodoList />
+            <Login />
         </div>
     );
 }
